@@ -17,60 +17,63 @@
 
         /* Top navigation bar */
         nav {
+            position: relative;
             display: flex;
-            /* puts items in one row */
             justify-content: center;
-            /* centers the menu */
             align-items: center;
             gap: 35px;
-            /* space between menu items */
             padding: 15px;
-            background: #f5f5f7;
-            /* apple-like light background */
+            background: hwb(240 83% 14%);
+            height: 44px;
             font-size: 14px;
         }
 
-        /* Remove underline from menu links */
         nav a {
             text-decoration: none;
             color: #333;
         }
 
+        nav img {
+            width: 15px;
+            position: relative;
+            filter: invert(1);
+        }
+
+        .apple-logo {
+            left: 20px;
+        }
+
         /* Main hero section */
         .hero {
             text-align: center;
-            /* center all content */
             background: #f5f5f7;
             padding-top: 60px;
+            width: 100%;
+            margin-bottom: 12px;
         }
 
-        /* Main big heading */
         .hero h1 {
             font-size: 70px;
-            /* large apple style heading */
             font-weight: 600;
             margin-bottom: 10px;
         }
 
-        /* subtitle text */
         .tagline {
             font-size: 28px;
             color: #333;
         }
 
-        /* availability text */
         .available {
             margin-top: 10px;
             font-size: 18px;
             color: gray;
         }
 
-        /* button container */
         .buttons {
             margin-top: 30px;
+            margin-bottom: 30px;
         }
 
-        /* Learn more button */
         .learn {
             background: #0071e3;
             color: white;
@@ -82,7 +85,6 @@
             cursor: pointer;
         }
 
-        /* Pre-order button */
         .pre {
             background: white;
             color: #0071e3;
@@ -93,20 +95,69 @@
             cursor: pointer;
         }
 
-        /* laptop image area */
         .hero img {
             margin-top: 40px;
             width: 550px;
-            /* control laptop size */
         }
+
+        /* ============================================================ */
+        /* START OF UPDATED CSS PART FOR NEW TILES                      */
+        /* ============================================================ */
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            /* Creates side-by-side tiles */
+            gap: 12px;
+            padding: 0 12px 12px 12px;
+        }
+
+        .tile {
+            background-color: #f5f5f7;
+            text-align: center;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 40px;
+        }
+
+        .tile img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            margin-top: auto;
+            /* Pushes image to bottom of tile */
+        }
+
+        .tile-dark {
+            background-color: #000;
+            color: white;
+        }
+
+        /* Small version of buttons for the grid */
+        .tile-link {
+            color: #0071e3;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 10px;
+        }
+
+        .tile-link:hover {
+            text-decoration: underline;
+        }
+
+        /* ============================================================ */
+        /* END OF UPDATED CSS PART                                      */
+        /* ============================================================ */
     </style>
 </head>
 
 <body>
 
-    <!-- Navigation bar -->
     <nav>
-        <a href="#"></a>
+        <div class="apple-logo">
+            <img src="images/icons/logo.svg" alt="Apple Logo">
+        </div>
         <a href="#">Store</a>
         <a href="#">Mac</a>
         <a href="#">iPad</a>
@@ -118,27 +169,45 @@
         <a href="#">Entertainment</a>
         <a href="#">Accessories</a>
         <a href="#">Support</a>
+        <div class="search-icons">
+            <img src="images/icons/search-icon.png" alt="Search">
+        </div>
+        <div class="cart-icon">
+            <img src="images/icons/cart.svg" alt="cart">
+        </div>
     </nav>
 
-    <!-- Hero section -->
     <section class="hero">
-
         <h1>MacBook Neo</h1>
-
         <p class="tagline">Amazing Mac. Surprising price.</p>
-
         <p class="available">Available starting 3.11</p>
-
         <div class="buttons">
             <button class="learn">Learn more</button>
             <button class="pre">Pre-order</button>
         </div>
-
-        <!-- Laptop image -->
-        <img src="macbook.png" alt="MacBook">
-
+        <img src="https://i.ebayimg.com/images/g/nCgAAeSwHxppr9IO/s-l1600.webp" alt="MacBook">
     </section>
 
+    <section class="hero">
+        <h1>iPad Air</h1>
+        <p class="tagline">Now supercharged by M4.</p>
+        <div class="buttons">
+            <button class="learn">Learn more</button>
+            <button class="pre">Pre-order</button>
+        </div>
+        <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcR7yS5P-9ca-IG_pLWuhRENfL8UQLi7O0q7Uem7fFRm6Y26eP-Bj-p9-vFRAedAnj9xstaZsjmmQLPGTY3vE4zKkWpnKiwB9IvMdO7s46FdS7qGe4feBvD5NYDw4N_dW4XZIZas&usqp=CAc"
+            alt="iPad Air">
+    </section>
+
+    <section class="product-grid">
+        <div class="tile tile-dark">
+            <img src="image_bca03e.jpg" alt="WWDC 26 and AirPods Max 2">
+        </div>
+
+        <div class="tile">
+            <img src="image_bca76a.jpg" alt="Apple Watch 11 and MacBook Pro M5">
+        </div>
+    </section>
 </body>
 
 </html>
