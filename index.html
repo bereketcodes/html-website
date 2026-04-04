@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MacBook Neo</title>
+
+    <style>
+        /* Reset default spacing so layout looks clean */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Top navigation bar */
+        nav {
+            display: flex;
+            /* puts items in one row */
+            justify-content: center;
+            /* centers the menu */
+            align-items: center;
+            gap: 35px;
+            /* space between menu items */
+            padding: 15px;
+            background: #f5f5f7;
+            /* apple-like light background */
+            font-size: 14px;
+        }
+
+        /* Remove underline from menu links */
+        nav a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* Main hero section */
+        .hero {
+            text-align: center;
+            /* center all content */
+            background: #f5f5f7;
+            padding-top: 60px;
+        }
+
+        /* Main big heading */
+        .hero h1 {
+            font-size: 70px;
+            /* large apple style heading */
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        /* subtitle text */
+        .tagline {
+            font-size: 28px;
+            color: #333;
+        }
+
+        /* availability text */
+        .available {
+            margin-top: 10px;
+            font-size: 18px;
+            color: gray;
+        }
+
+        /* button container */
+        .buttons {
+            margin-top: 30px;
+        }
+
+        /* Learn more button */
+        .learn {
+            background: #0071e3;
+            color: white;
+            border: none;
+            padding: 12px 26px;
+            border-radius: 25px;
+            font-size: 16px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        /* Pre-order button */
+        .pre {
+            background: white;
+            color: #0071e3;
+            border: 1px solid #0071e3;
+            padding: 12px 26px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* laptop image area */
+        .hero img {
+            margin-top: 40px;
+            width: 550px;
+            /* control laptop size */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+    <nav>
+        <a href="#"></a>
+        <a href="#">Store</a>
+        <a href="#">Mac</a>
+        <a href="#">iPad</a>
+        <a href="#">iPhone</a>
+        <a href="#">Watch</a>
+        <a href="#">Vision</a>
+        <a href="#">AirPods</a>
+        <a href="#">TV & Home</a>
+        <a href="#">Entertainment</a>
+        <a href="#">Accessories</a>
+        <a href="#">Support</a>
+    </nav>
+
+    <!-- Hero section -->
+    <section class="hero">
+
+        <h1>MacBook Neo</h1>
+
+        <p class="tagline">Amazing Mac. Surprising price.</p>
+
+        <p class="available">Available starting 3.11</p>
+
+        <div class="buttons">
+            <button class="learn">Learn more</button>
+            <button class="pre">Pre-order</button>
+        </div>
+
+        <!-- Laptop image -->
+        <img src="macbook.png" alt="MacBook">
+
+    </section>
+
+</body>
+
+</html>
